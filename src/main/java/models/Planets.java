@@ -1,4 +1,4 @@
-package com.br.pmoraes.teste-b2w-stw;
+package com.br.pmoraes.teste-b2w-stw.models;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
