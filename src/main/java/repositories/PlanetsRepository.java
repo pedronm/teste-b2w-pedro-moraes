@@ -1,6 +1,6 @@
-package com.br.pmoraes.teste-b2w-stw.repositories;
+package com.br.pmoraes.testeB2wStw.repositories;
 
-import com.br.pmoraes.teste-b2w-stw.models.Planets;
+import com.br.pmoraes.testeB2wStw.models.Planets;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 

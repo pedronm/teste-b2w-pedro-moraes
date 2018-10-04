@@ -1,7 +1,8 @@
-package com.br.pmoraes.teste-b2w-stw.controllers;
+package com.br.pmoraes.testeB2wStw.controllers;
 
-import com.br.pmoraes.teste-b2w-stw.models.Planets;
-import com.br.pmoraes.teste-b2w-stw.repositories.PlanetsRepository;
+import org.bson.types.ObjectId;
+import com.br.pmoraes.testeB2wStw.models.Planets;
+import com.br.pmoraes.testeB2wStw.repositories.PlanetsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,7 +13,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping(“/planets”)
+@RequestMapping("/planets")
 public class PlanetsController {
   @Autowired
   private PlanetsRepository repository;
@@ -23,12 +24,12 @@ public class PlanetsController {
   }
   
   @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-  public Planets getPlanetById(@PathVariable("id") ObjectId id) {
+  public Planets getPlanetsById(@PathVariable("id") ObjectId id) {
 	  return repository.findBy_id(id);
   }
   
   @RequestMapping(value ="/{id}", method = RequestMethod.PUT)
-  public void modifyPlanetById(@PathVariable("id") Object id, @Valid)
+  public void modifyPlanetsById(@PathVariable("id") ObjectId id, @Valid
   @RequestBody Planets planets){
 	  planets.set_id(id);
 	  repository.save(planets);
@@ -36,7 +37,7 @@ public class PlanetsController {
   }
   
   @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-  public void deletePet(@PathVariable ObjectId id) {
+  public void deletePlanets(@PathVariable ObjectId id) {
 	  repository.delete(repository.findBy_id(id));
   }
   

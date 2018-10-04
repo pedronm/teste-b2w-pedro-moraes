@@ -1,88 +1,54 @@
-package com.br.pmoraes.teste-b2w-stw.models;
+package com.br.pmoraes.testeB2wStw.models;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import java.util.List;
 
 public class Planets{
+	
 	@Id
 	public ObjectId _id;
 	
 	public String clima;
-	public String diametro;
-	public String gravidade;
 	public String nome;
-	public String periododeOrbita;
-	public String populacao;
-	public List<String> residentes;
-	public String rotacoesporPeriodo;
-	public String aguanaSuperficie;
 	public String terreno;
-	public String url;
 	
-	public planets() {}
+	public Planets() {}
 	
-	public planets(String clima, String diametro, String gravidade, String nome,
-			       String periododeOrbita, String populacao, List<String> residentes,
-			       String rotacoesporPeriodo, String aguanaSuperficie, String terreno,
-			       String url) {
-		this.clima 			 	 = clima;
-		this.diametro 		 	 = diametro;
-		this.gravidade 		 	 = gravidade;
-		this.nome 			 	 = nome;
-		this.periododeOrbita 	 = periododeOrbita;
-		this.populacao 		 	 = populacao;
-		this.residentes		 	 = residentes;
-		this.rotacoesporPeriodo	 = rotacoesPorPeriodo;
-		this.aguanaSuperficie 	 = aguanaSuperficie;
-		this.terreno 		 	 = terreno;
+	public Planets(ObjectId _id,
+				   String nome,
+				   String clima, 
+			       String terreno) {
+		this._id 	 = _id;
+		this.nome 	 = nome;
+		this.clima 	 = clima;
+		this.terreno = terreno;
 	}
+		
+    public String get_id(){
+    	return _id.toHexString(); 
+    }
+    
+    public void set_id(ObjectId _id) { 
+    	this._id = _id; 
+    }
 	
-	public getClima() {
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getClima() {
 		return clima;
 	}
-	public setClima(String clima) {
+	public void setClima(String clima) {
 		this.clima = clima;
 	}
-	public getDiametro() {
-		return diametro;
+	public String getTerreno() {
+		return terreno;
 	}
-	public setDiametro(String diametro) {
-		this.diametro = diametro;
-	}
-	public getClima() {
-		return clima;
-	}
-	public setClima(String clima) {
-		this.clima = clima;
-	}
-	public getClima() {
-		return clima;
-	}
-	public setClima(String clima) {
-		this.clima = clima;
-	}
-	public getClima() {
-		return clima;
-	}
-	public setClima(String clima) {
-		this.clima = clima;
-	}
-	public getClima() {
-		return clima;
-	}
-	public setClima(String clima) {
-		this.clima = clima;
-	}
-	public getClima() {
-		return clima;
-	}
-	public setClima(String clima) {
-		this.clima = clima;
-	}
-	public getClima() {
-		return clima;
-	}
-	public setClima(String clima) {
-		this.clima = clima;
+	public void setTerreno(String terreno) {
+		this.clima = terreno;
 	}
 }
